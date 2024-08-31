@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter ID Form</title>
+</head>
+
+<style>
+
+.Personal{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color:antiquewhite;
+    padding: 20px;
+    font-size: medium;
+}  
+
+.address{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color:lightgrey;
+    padding: 20px;
+}
+
+.Certificate{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color:antiquewhite;
+    padding: 20px;
+}
+
+.submit{
+    text-align: center;
+}
+</style>
+
+<body>
+        <header style="background-color:lightgrey; font-family: Arial, Helvetica, sans-serif; text-align: center; padding: 5px;">
+        <h2>Voter ID Form</h2>
+        </header>
+
+    <form action="success.html">
+
+        <div class="Personal">
+
+        <h3>Personal Details</h3>
+
+        <img src="profile.jpeg" alt="myimage" width="90px" height="90px"><br><br>
+
+        <label for="fname" >First name</label><br>
+        <input type="text" id="fname" name="fname" placeholder="First Name" required><br><br>
+
+        <label for="lname" >Last name</label><br>
+        <input type="text" id="lname" name="lname" placeholder="Last Name" required><br><br>
+
+        <label>Date Of Birth</label>
+        <input type="date" name="dob" max="2005-01-02" required>
+        <br><br>
+
+        <label>Enter your Email</label>
+        <input type="email" placeholder="Enter Email" name="email" required><br><br>
+
+        <label>Phone number</label>
+        <input type="text" name="country code"  value="+91" size="2" readonly/>   
+        <input type="text" name="phone" size="10" placeholder="number" maxlength="10"/><br><br> 
+
+        <label for="nationality" >Nationality</label>
+        <input type="text" id="nationality" name="nationality" placeholder="nationality" required><br><br>
+
+        <label for="cast" >Cast</label>
+        <input type="text" id="cast" name="cast" placeholder="cast" required><br><br>
+
+        <label>Religion</label><br><br>
+
+        <input type="radio" id="hindu" name="Religion" value="hindu">
+        <label for="hindu">Hindu</label><br>
+        <input type="radio" id="Muslim" name="Religion" value="Muslim">
+        <label for="Muslim">Muslim</label><br>
+        <input type="radio" id="Christian" name="Religion" value="christian">
+        <label for="christian">Christian</label>
+        <br><br>
+        
+        </div>
+
+        <div class="address">
+
+            <h3>Address Details</h3>
+            <fieldset>
+
+                <legend>Address</legend>
+
+                    <textarea cols="40" rows="3" value="address" placeholder="Enter your Address"></textarea>  
+                    <br><br>
+
+                    <label>District</label>
+                    <select name="district" id="district">
+                       
+                        <option value="1">Trichy</option>
+                        <option value="2">Chennai</option>
+                        <option value="3">Madurai</option>
+                        <option value="4">Coimbatore</option>
+                        <option value="5">Tirunelveli</option>
+
+                    </select>
+
+                    <label for="state" >State</label>
+                    <input type="text" id="state" name="state" placeholder="Enter your State Name" required>
+
+                    <label for="street" >Street</label>
+                    <input type="text" id="street" name="street" placeholder="Enter your street" required><br><br>
+
+                    <label for="Town" >Town / Village</label>
+                    <input type="text" id="Town" name="Town" placeholder="Enter your Town / Village" required>
+
+                    <label for="Taluk" >Taluk</label>
+                    <input type="text" id="Taluk" name="Taluk" placeholder="Enter your Taluk Name" required>
+
+                    <label for="pincode">Pin-Code</label>
+                    <input type="text" id="pincode" name="pincode" maxlength="6" placeholder="pincode" required><br><br>
+
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125425.71798357615!2d78.53064940674933!3d10.768839223431957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baa5fd79b6edead%3A0x2af785eed9208744!2sCARE%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1723627793888!5m2!1sen!2sin" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+            </fieldset>
+
+        </div>
+
+        <div class="Certificate">
+            <h3>Upload your Certificates</h3>
+
+            <label>Community Certificate</label><br><br>
+            <input type="file" id="Community" name="Community"><br><br>
+
+
+            <label>Aadhar Certificate</label><br><br>
+            <input type="file" id="Aadhar" name="Aadhar"><br><br>
+
+
+            <label>SSLC Certificate</label><br><br>
+            <input type="file" id="sslc" name="sslc"><br><br>
+
+
+            <label>HSC Certificate</label><br><br>
+            <input type="file" id="hsc" name="hsc"><br><br>
+
+        </div>
+
+
+        <footer style="text-align: right; background-color:lightgrey; padding: 10px; font-size: 20px;">
+
+        <label for="sign" >Signature : </label>
+        <input type="text" id="sign" name="sign" placeholder="Enter Your Signature" required><br><br>
+        
+        <div class="submit">
+        <input type="submit" value="Register">
+        <input type="reset">
+        </div>
+
+        </footer>
+        
+    </form>
+
+</body>
+</html>
